@@ -1,0 +1,131 @@
+/*-- FORMULÁRIO DE EMAIL--*/
+/* NEWSLETTER */
+
+.newsletter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.formemail {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.newsletter-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.emailimgcontato {
+  font-size: 60px !important;
+  width: 60px !important;
+  height: 60px !important;
+  color: #fa7b04;
+}
+
+.newsletter-header h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+.newsletter-header p {
+  margin-top: 8px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.textemail {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.textemail:focus {
+  border-color: #fa7b04;
+}
+
+.botaoformemail {
+  border: none;
+  background: #fa7b04;
+  color: white;
+  font-weight: 600;
+  padding: 14px 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botaoformemail:hover {
+  background: #881df2;
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+
+.footer-contato {
+  margin-top: 50px;
+  padding: 25px 40px;
+  border-top: 1px solid #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+.info-item i {
+  color: #fa7b04;
+  font-size: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #555;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+.fa-whatsapp:hover {
+  color: #25d366;
+}
+
+.fa-x-twitter:hover {
+  color: #000;
+}
+
+.fa-instagram:hover {
+  color: #e1306c;
+}

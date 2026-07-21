@@ -1,0 +1,85 @@
+<nav class="containerform">
+  <legend id="titulopacote">
+    Seu próximo destino começa aqui
+  </legend>
+
+  <div class="icones">
+    <ul class="iconesmenu">
+      <li>
+        <i class="fas fa-plane-arrival"></i>
+      </li>
+      <li>
+        <i class="fas fa-bed"></i>
+      </li>
+      <li>
+        <i class="fas fa-landmark"></i>
+      </li>
+    </ul>
+
+    <ul class="textosicones">
+      <li>
+        <p>Voo</p>
+      </li>
+      <li>
+        <p>Hospedagem</p>
+      </li>
+      <li>
+        <p>Passeios</p>
+      </li>
+    </ul>
+  </div>
+
+  <form class="formviagem" (submit)="$event.preventDefault()">
+  
+
+      <input list="origem" [(ngModel)]="origem" name="origem" class="origem" placeholder="Origem" />
+      <datalist id="origem">
+        <option value="GRU">São Paulo</option>
+        <option value="GIG">Rio de Janeiro</option>
+        <option value="BSB">Brasília - DF</option>
+        <option value="CNF">Belo Horizonte</option>
+        <option value="SSA">Salvador</option>
+        <option value="REC">Recife</option>
+        <option value="FOR">Fortaleza</option>
+        <option value="MAO">Manaus</option>
+        <option value="BEL">Belém</option>
+        <option value="POA">Porto Alegre</option>
+        <option value="CWB">Curitiba</option>
+        <option value="FLN">Florianópolis</option>
+        <option value="SLZ">São Luís</option>
+      </datalist>
+   
+ 
+
+      <input list="destino" [(ngModel)]="destino" name="destino" class="destino" placeholder="Destino" />
+      <datalist id="destino">
+        <option value="GRU">São Paulo</option>
+        <option value="GIG">Rio de Janeiro</option>
+        <option value="BSB">Brasília - DF</option>
+        <option value="CNF">Belo Horizonte</option>
+        <option value="SSA">Salvador</option>
+        <option value="REC">Recife</option>
+        <option value="FOR">Fortaleza</option>
+        <option value="MAO">Manaus</option>
+        <option value="BEL">Belém</option>
+        <option value="POA">Porto Alegre</option>
+        <option value="CWB">Curitiba</option>
+        <option value="FLN">Florianópolis</option>
+        <option value="SLZ">São Luís</option>
+      </datalist>
+    
+
+      <input [(ngModel)]="ida" name="ida" class="data" placeholder="Ida" [type]="tipoIda" (focus)="tipoIda='date'"
+        (blur)="tipoIda='text'" />
+    
+
+      <input [(ngModel)]="volta" name="volta" class="data" placeholder="Volta" [type]="tipoVolta"
+        (focus)="tipoVolta='date'" (blur)="tipoVolta='text'" />
+
+
+      <button type="button" class="botaoform" id="botao" (click)="buscarViagens()">
+        Buscar
+      </button>
+
+  </form>
+</nav>

@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Beach";
+  src: url("../fontes/BebasNeue-Regular.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+} 
+body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.prod {
+  margin-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+#linha-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 300px;
+  border: 1px solid #00000015;
+}
+section.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+section.corpo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.corpo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+#logo {
+  margin-left: 80px;
+  margin-top: 10px;
+  width: 100px;
+  height: 50px; 
+}
+
+table {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  
+  width: 100%;
+  margin-top: 50px;
+}
+table tr {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+#central {
+  width: 200px;
+  font-size: 10px;
+  margin-top: -65px;
+  
+}
+#emailp {
+  font-size: 10px;
+  width: 160px;
+}
+#rede1
+{
+  width: 80px;
+}
+
+#rede2,
+#rede3,
+#rede4 {
+  width: 25px;
+}
+table tr td {
+  width: 180px;
+  
+}
+
+#user {
+  width: 20px;
+  height: 20px;
+}
+
+.icones{
+  width: 100%;
+}
+.iconesmenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textosicones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.textosicones li p {
+  text-align: center;
+  color: #000;
+  margin-left: 12px;
+}
+.fas-logout{
+  float: right;
+  background-color: transparent;
+  border: none;
+  padding: none;
+  margin-right: 20px;
+}
+.fa-logout{
+  width: 20px;
+  height: 20px;
+}
+.fa-plane-arrival, .fa-bed, .fa-landmark, .fa-logout{
+  float: center;
+  margin-top: 10px;
+  border-radius: 0.313rem;
+  background-color: #fa7b04;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(85, 84, 84, 0.507);
+  color: #fff;
+  padding: 0.800rem;
+  font-size: 25px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover, .fa-logout:hover {
+  background-color: #881df2;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.fa-user {
+  margin-top: 15px;
+  float: right;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 0.313rem;
+  padding: 0.313rem;
+  font-size: 30px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+#entre {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+} 
+nav ul {
+  text-align: right;
+  width: 100%;
+  color: #881df2;
+}
+nav ul li {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  width: 70px;
+  text-align: right;
+  margin-right: 30px;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.7em;
+  color: #881df2;
+}
+nav ul li:hover {
+  color: #fff;
+  transition: 0.2s;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+} /*FORMULÁRIO DE ORIGEM E DESTINO*/
+.containerform {
+  background: var(--img-designer) center center no-repeat fixed;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  text-align: center;
+}
+.formviagem {
+  padding: 10px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 10px;
+  color: #0d0d0d73;
+  background-color: #fff;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+}
+#titulopacote {
+  font-family: "Beach";
+  font-size: 4em;
+  color: #0d0d0d;
+  text-align: center;
+}
+#subtitulo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1em;
+  color: #0d0d0d;
+  text-align: center;
+}
+.destino,
+.data,
+.origem,
+#data {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2em;
+  display: inline-block;
+  width: 280px;
+  border-color: transparent;
+  color: #0d0d0d;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  border-color: rgba(240, 248, 255, 0.897);
+  font-weight: bolder;
+}
+.formviagem p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 0.7em;
+  margin-top: 10px;
+}
+
+.ver{
+  color: #fff;
+  background: #fa7b04;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+}
+.botaoform {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3em;
+  background-color: #fa7b04;
+  font-weight: bold;
+  padding: 15px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: -2px;
+  margin-left: 2px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+  cursor: pointer;
+}
+.botaoform:hover {
+  background-color: #881df2;
+  color: #fff;
+  transition: all 0.4s ease-in;
+}
+header {
+  width: 100%;
+  position: absolute;
+  margin-top: 20px;
+}
+header h1 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 2.2em;
+  color: #0d0d0d;
+}
+h2 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1.5em;
+} /* PACOTES DE VIAGEM */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper,
+.flip-container2:hover .flipper2,
+.flip-container2.hover .flipper2,
+.flip-container3:hover .flipper3,
+.flip-container3.hover .flipper3,
+.flip-container4:hover .flipper4,
+.flip-container4.hover .flipper4,
+.flip-container5:hover .flipper5,
+.flip-container5.hover .flipper5,
+.flip-container6:hover .flipper6,
+.flip-container6.hover .flipper6,
+.flip-container7:hover .flipper7,
+.flip-container7.hover .flipper7,
+.flip-container8:hover .flipper8,
+.flip-container8.hover .flipper8 {
+  transform: rotateY(180deg);
+  transition: width 0.3s, height 0.3s;
+}
+
+.flip-container,
+.front,
+.back {
+  margin-top: 19%;
+  height: 500px;
+  width: 330px;
+  background-color: transparent;
+  transition-timing-function:ease;
+  perspective: 2000px;
+} /*PRIMEIRO PACOTE*/
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+.front {
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.box {
+  height: 500px;
+  width: 330px;
+  border-radius: 10px;
+}
+
+.box-front {
+  background-color: #f8dfba4b;
+}
+.imgbox {
+  background: black var(--img-bonito) center center no-repeat fixed;
+}
+.box-front h1 {
+  font-size: 1em;
+  margin-top: 5px;
+  font-family: "Beach";
+  text-align: center;
+}
+.box-front h2 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1em;
+}
+.box-front p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.7em;
+}
+.box-front a {
+  text-decoration: none;
+  color: black;
+}
+.box-front .taxas {
+  font-size: 0.6em;
+  margin-top: -20px;
+}
+.box-front .valor {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bolder;
+  margin-bottom: -40px;
+}
+.box-front .preco {
+  text-align: center;
+  font-size: 0.8em;
+}
+.box-front .obs {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: -20px;
+}
+.box-back {
+  background: black var(--img-bonito) center center no-repeat fixed;
+}
+.botao {
+  background: #fa7b04;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 300px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+.botao:hover {
+  background-color: #881df2;
+  color: #fff;
+  transition: all 0.4s ease-in;
+}
+.flip-container2,
+.flip-container3,
+.flip-container4,
+.flip-container5,
+.flip-container6,
+.flip-container7,
+.flip-container8,
+.flip-container9,
+.flip-container10,
+.flip-container11,
+.flip-container12 {
+  height: 385px;
+  width: 330px;
+  background-color: transparent;
+} /*SEGUNDO PACOTE*/
+.flipper2 {
+  top: 7%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back2 {
+  background: black var(--img-praia) center center no-repeat fixed;
+}
+.imgbox2 {
+  background: black var(--img-praia) center center no-repeat fixed;
+} /*TERCEIRO PACOTE*/
+.flipper3 {
+  top: 17%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back3 {
+  background: black var(--img-california) center center no-repeat fixed;
+}
+.imgbox3 {
+  background: black var(--img-california) center center no-repeat fixed;
+} /*QUARTO PACOTE*/
+.flipper4 {
+  top: 26%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back4 {
+  background: black var(--img-roma) center center no-repeat fixed;
+}
+.imgbox4 {
+  background: black var(--img-roma) center center no-repeat fixed;
+} /*QUINTO PACOTE*/
+.flipper5 {
+  top: 35%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back5 {
+  background: black var(--img-saopaulo) center center no-repeat fixed;
+}
+.imgbox5 {
+  background: black var(--img-saopaulo) center center no-repeat fixed;
+} /*SEXTO PACOTE*/
+.flipper6 {
+  top: 44%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back6 {
+  background: black var(--img-salvador) center center no-repeat fixed;
+}
+.imgbox6 {
+  background: black var(--img-salvador) center center no-repeat fixed;
+} /*SÉTIMO PACOTE*/
+.flipper7 {
+  top: 53%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back7 {
+  background: black var(--img-japao) center center no-repeat fixed;
+}
+.imgbox7 {
+  background: black var(--img-japao) center center no-repeat fixed;
+} /*OITAVO PACOTE*/
+.flipper8 {
+  top: 62%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back8 {
+  background: black var(--img-riodejaneiro) center center no-repeat
+    fixed;
+  background-size: cover;
+  text-align: center;
+}
+.imgbox8 {
+  background: black var(--img-riodejaneiro) center center no-repeat
+    fixed;
+  background-size: cover;
+  height: 120px;
+  border-radius: 20px 20px 0px 0px;
+} /*BOTÃO RESERVA*/
+.botaoreserva {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+.botao1 {
+  min-width: 400px;
+  min-height: 80px;
+  margin-top: 180px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 800;
+  color: rgb(255, 254, 254);
+  background: #fa7b04;
+  background: linear-gradient(90deg, #fa7b04, 0%, #fa7b04 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px #fa7b048e;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+.botao1:hover,
+.botao1:focus {
+  color: #ffffff;
+  background: linear-gradient(90deg, #881df2, 0%, #881df2 100%);
+  box-shadow: 5px 5px 8px #881df260;
+  transform: translateY(-6px);
+}
+

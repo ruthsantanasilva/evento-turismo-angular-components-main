@@ -1,0 +1,324 @@
+.tituloConfira {
+  width: 100%;
+  position: relative;
+  margin-top: 130px;
+  margin-bottom: -50px;
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1em;
+  color: #0d0d0d;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+.corpo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ver{
+  color: #fff;
+  background: #fa7b04;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+}
+
+h2 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1.5em;
+} /* PACOTES DE VIAGEM */
+.flip-container:hover .flipper,
+.flip-container.hover .flipper,
+.flip-container2:hover .flipper2,
+.flip-container2.hover .flipper2,
+.flip-container3:hover .flipper3,
+.flip-container3.hover .flipper3,
+.flip-container4:hover .flipper4,
+.flip-container4.hover .flipper4,
+.flip-container5:hover .flipper5,
+.flip-container5.hover .flipper5,
+.flip-container6:hover .flipper6,
+.flip-container6.hover .flipper6,
+.flip-container7:hover .flipper7,
+.flip-container7.hover .flipper7,
+.flip-container8:hover .flipper8,
+.flip-container8.hover .flipper8 {
+  transform: rotateY(180deg);
+  transition: width 0.3s, height 0.3s;
+}
+
+.flip-container,
+.front,
+.back {
+  margin-top: 19%;
+  height: 500px;
+  width: 330px;
+  background-color: transparent;
+  transition-timing-function:ease;
+  perspective: 2000px;
+} /*PRIMEIRO PACOTE*/
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.front,
+.back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+}
+.front {
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.box {
+  height: 500px;
+  width: 330px;
+  border-radius: 10px;
+}
+
+.box-front {
+  background-color: #f8dfba4b;
+}
+.imgbox {
+  background: black var(--img-bonito) center center no-repeat fixed;
+}
+.box-front h1 {
+  font-size: 1em;
+  margin-top: 5px;
+  font-family: "Beach";
+  text-align: center;
+}
+.box-front h2 {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 1em;
+}
+.box-front p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.7em;
+}
+.box-front a {
+  text-decoration: none;
+  color: black;
+}
+.box-front .taxas {
+  font-size: 0.6em;
+  margin-top: -20px;
+}
+.box-front .valor {
+  text-align: center;
+  font-size: 0.7em;
+  font-weight: bolder;
+  margin-bottom: -40px;
+}
+.box-front .preco {
+  text-align: center;
+  font-size: 0.8em;
+}
+.box-front .obs {
+  font-family: "Beach";
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: -20px;
+}
+.box-back {
+  background: black var(--img-bonito) center center no-repeat fixed;
+}
+.botao {
+  background: #fa7b04;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 300px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+.botao:hover {
+  background-color: #881df2;
+  color: #fff;
+  transition: all 0.4s ease-in;
+}
+.flip-container2,
+.flip-container3,
+.flip-container4,
+.flip-container5,
+.flip-container6,
+.flip-container7,
+.flip-container8,
+.flip-container9,
+.flip-container10,
+.flip-container11,
+.flip-container12 {
+  height: 385px;
+  width: 330px;
+  background-color: transparent;
+} /*SEGUNDO PACOTE*/
+.flipper2 {
+  top: 7%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back2 {
+  background: black var(--img-praia) center center no-repeat fixed;
+}
+.imgbox2 {
+  background: black var(--img-praia) center center no-repeat fixed;
+} /*TERCEIRO PACOTE*/
+.flipper3 {
+  top: 17%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back3 {
+  background: black var(--img-california) center center no-repeat fixed;
+}
+.imgbox3 {
+  background: black var(--img-california) center center no-repeat fixed;
+} /*QUARTO PACOTE*/
+.flipper4 {
+  top: 26%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back4 {
+  background: black var(--img-roma) center center no-repeat fixed;
+}
+.imgbox4 {
+  background: black var(--img-roma) center center no-repeat fixed;
+} /*QUINTO PACOTE*/
+.flipper5 {
+  top: 35%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back5 {
+  background: black var(--img-saopaulo) center center no-repeat fixed;
+}
+.imgbox5 {
+  background: black var(--img-saopaulo) center center no-repeat fixed;
+} /*SEXTO PACOTE*/
+.flipper6 {
+  top: 44%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back6 {
+  background: black var(--img-salvador) center center no-repeat fixed;
+}
+.imgbox6 {
+  background: black var(--img-salvador) center center no-repeat fixed;
+} /*SÉTIMO PACOTE*/
+.flipper7 {
+  top: 53%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back7 {
+  background: black var(--img-japao) center center no-repeat fixed;
+}
+.imgbox7 {
+  background: black var(--img-japao) center center no-repeat fixed;
+} /*OITAVO PACOTE*/
+.flipper8 {
+  top: 62%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+.box-back8 {
+  background: black var(--img-riodejaneiro) center center no-repeat
+    fixed;
+  background-size: cover;
+  text-align: center;
+}
+.imgbox8 {
+  background: black var(--img-riodejaneiro) center center no-repeat
+    fixed;
+  background-size: cover;
+  height: 120px;
+  border-radius: 20px 20px 0px 0px;
+} /*BOTÃO RESERVA*/
+.botaoreserva {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.botao1 {
+  min-width: 400px;
+  min-height: 80px;
+  margin-top: 150px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 800;
+  color: rgb(255, 254, 254);
+  background: #fa7b04;
+  background: linear-gradient(90deg, #fa7b04, 0%, #fa7b04 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px #fa7b048e;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+.botao1:hover,
+.botao1:focus {
+  color: #ffffff;
+  background: linear-gradient(90deg, #881df2, 0%, #881df2 100%);
+  box-shadow: 5px 5px 8px #881df260;
+  transform: translateY(-6px);
+}
+

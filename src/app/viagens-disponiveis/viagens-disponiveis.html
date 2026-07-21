@@ -1,0 +1,69 @@
+<router-outlet></router-outlet>
+<app-buscar-viagens></app-buscar-viagens>
+<app-left-sidebar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+  (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)">
+</app-left-sidebar>
+
+
+<h1>Confira nossos pacotes promocionais</h1>
+
+
+<div class="lista-voos">
+  <div *ngFor="let voo of voosFiltrados">
+
+    <div class="voo-info">
+
+      <div class="trecho">
+        <span class="hora">{{ voo.ida.hora }}</span>
+
+        <span class="rota">
+          {{ voo.ida.rota }}
+        </span>
+
+        <span class="datavoo">
+          Ida: {{ busca?.ida }}
+        </span>
+
+        <span class="tipo">direto</span>
+        <span class="duracao">{{ voo.ida.duracao }}</span>
+      </div>
+
+      <div class="trecho">
+        <span class="hora">{{ voo.volta.hora }}</span>
+
+        <span class="rota">
+          {{ voo.ida.rota }}
+        </span>
+
+        <span class="datavoo">
+          Volta: {{ busca?.volta }}
+        </span>
+
+        <span class="tipo">{{ voo.tipoVoo }}</span>
+        <span class="duracao">{{ voo.volta.duracao }}</span>
+      </div>
+
+      <div class="companhia">
+        {{ voo.companhia }}
+      </div>
+
+    </div>
+
+    <div class="voo-preco">
+      <div class="valor">R$ {{ voo.preco }}</div>
+      <div class="tipo-tarifa">{{ voo.tarifa }}</div>
+      <button class="btn-oferta">Ver oferta</button>
+    </div>
+
+  </div>
+</div>
+
+
+<div *ngIf="voosFiltrados.length === 0">
+  Nenhum voo encontrado 😢
+</div>
+
+<app-mais-requisitados></app-mais-requisitados>
+
+<app-opinioes></app-opinioes>
+<app-envio-email></app-envio-email>

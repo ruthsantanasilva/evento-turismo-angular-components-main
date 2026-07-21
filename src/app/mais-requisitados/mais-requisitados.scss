@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.slider,
+.slider2,
+.maisrequisitados {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 95%;
+  width: 95%;
+}
+.maisrequisitados:hover{
+    transform: translateY(5px);
+    transition: all 0.2s ease-in-out 0s;
+}
+li.slide {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+}
+li.slide2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  margin-top: 10px;
+} 
+/*LEGENDA DOS LUGARES MAIS REQUISITADOS*/
+.slide2 p {
+  font-size: 0.9em;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  height: 95%;
+  width: 95%;
+}
+.slide img {
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 5px #242425;
+  border-radius: 60%;
+  height: 95%;
+  width: 95%;
+}

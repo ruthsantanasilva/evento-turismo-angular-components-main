@@ -1,0 +1,261 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html {
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      
+    )
+  );
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+  background: #faf9f9;
+}
+
+:root {
+  --img-designer: url("/Designer.png");
+  --img-bonito: url("/local/bonito.jpg");
+  --img-california: url("/local/california.png");
+  --img-grecia1: url("/local/grecia1.png");
+  --img-japao: url("/local/japao.jpg");
+  --img-praia: url("/local/praia.jpg");
+  --img-riodejaneiro: url("/local/riodejaneiro.jpg");
+  --img-roma: url("/local/roma.jpg");
+  --img-salvador: url("/local/salvador.jpg");
+  --img-saopaulo: url("/local/saopaulo.jpg");
+}
+
+
+.box-back,
+.box-back2,
+.box-back3,
+.box-back4,
+.box-back5,
+.box-back6,
+.box-back7,
+.box-back8{
+  background-size: cover;
+  text-align: center;
+}
+.imgbox,
+.imgbox2,
+.imgbox3,
+.imgbox4,
+.imgbox5,
+.imgbox6,
+.imgbox7,
+.imgbox8{
+border-radius: 10px 10px 0px 0px;
+height: 120px;
+background-size: cover;
+text-align: center;
+}
+
+.box {
+  height: 500px;
+  width: 330px;
+  border-radius: 10px;
+}
+
+.box-front {
+  background-color: #f8dfba4b;
+}
+
+section.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.espaco{
+  height: 1300px;
+}
+
+
+@font-face {
+  font-family: "Beach";
+  src: url("app/fontes/BebasNeue-Regular.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+} 
+
+
+.prod {
+  margin-top: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 1em;
+}
+.tituloopinioes{
+  font-family: "Beach";
+  font-size: 2.3em;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.corpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+section.corpo2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.corpo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+#logo {
+  margin-left: 80px;
+  margin-top: 10px;
+  width: 100px;
+  height: 50px; 
+}
+
+.fas-logout{
+  float: right;
+  background-color: transparent;
+  border: none;
+  padding: none;
+  margin-right: 20px;
+}
+.fa-logout{
+  width: 20px;
+  height: 20px;
+}
+.fa-plane-arrival, .fa-bed, .fa-landmark, .fa-logout{
+  float: center;
+  margin-top: 10px;
+  border-radius: 0.313rem;
+  background-color: #fa7b04;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(85, 84, 84, 0.507);
+  color: #fff;
+  padding: 0.800rem;
+  font-size: 25px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover, .fa-logout:hover {
+  background-color: #881df2;
+  transition: all 0.1s ease-in-out 0s;
+}
+
+.fa-user {
+  margin-top: 15px;
+  float: right;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 0.313rem;
+  padding: 0.313rem;
+  font-size: 30px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+#entre {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+} 
+nav ul {
+  text-align: right;
+  width: 100%;
+  color: #881df2;
+}
+nav ul li {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  width: 70px;
+  text-align: right;
+  margin-right: 30px;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.7em;
+  color: #881df2;
+}
+nav ul li:hover {
+  color: #fff;
+  transition: 0.2s;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+} 
+#titulopacote {
+  font-family: "Beach";
+  font-size: 4em;
+  color: #0d0d0d;
+  text-align: center;
+}
+#subtitulo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1em;
+  color: #0d0d0d;
+  text-align: center;
+}
+
+.ver{
+  color: #fff;
+  background: #fa7b04;
+  text-transform: uppercase;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
+  border-color: transparent;
+}
+
+
+
+
+
+
+

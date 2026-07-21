@@ -1,0 +1,145 @@
+<div class="body">
+  <div class="paglogin">
+    <a routerLink="/"> <img ngSrc="/logo1.png" width="500" height="500"> </a>
+
+    <section class="corpo">
+      <div class="selecao">
+        <input type="radio" id="login" class="rd" name="consulta" value="login" [checked]="modo === 'login'"
+          (change)="modo = 'login'" />
+        <label for="login" class="slogin1">Login</label>
+        <input type="radio" id="cadastro" class="rd" name="consulta" value="cadastro" [checked]="modo === 'cadastro'"
+          (change)="modo = 'cadastro'" />
+        <label for="cadastro" class="slogin2">Cadastro</label>
+      </div>
+
+      <div class="flip-containerlc">
+        <div class="flipperlc">
+
+          <!-- LOGIN -->
+
+          <div id="ediv1" class="onOff frontlc" *ngIf="modo === 'login'">
+            <div id="box1" class="boxlc box-frontlc">
+              <form method="post" name="dados" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <legend class="titulologin">Login</legend>
+
+                <mat-form-field class="label">
+                  <mat-label for="email" class="email">
+                    E-mail: </mat-label>
+                  <input class="input-padrao" type="email" id="email" formControlName="email" name="email" matInput
+                    placeholder="name@email.com" required />
+                  <mat-error
+                    *ngIf="form.get('email')?.invalid && (form.get('email')?.touched || form.get('email')?.dirty)">
+                    E-mail ou senha inválidos
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="label">
+                  <mat-label for="password" class="password">
+                    Senha:
+                  </mat-label>
+                  <input matInput class="input-padrao" type="password" id="password" name="password"
+                    formControlName="password" [type]="hide() ? 'password' : 'text'" />
+
+                  <button mat-icon-button matSuffix type="button" (click)="clickEvent($event)"
+                    [attr.aria-label]="'Mostrar senha'">
+                    <mat-icon>
+                      {{ hide() ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+                  </button>
+
+                  <mat-error
+                    *ngIf="form.get('email')?.invalid && (form.get('email')?.touched || form.get('email')?.dirty)">
+                    E-mail ou senha inválidos
+                  </mat-error>
+
+                </mat-form-field>
+
+                <div class="pbotao">
+                  <button type="submit" value="Entrar" class="botaolc" name="acao">
+                    {{modo === 'login' ? 'Entrar' : 'Cadastrar'}} </button>
+                </div>
+
+                <p class="esqueci">
+                  Esqueceu a senha? <a routerLink="/">Clique aqui!</a>
+                </p>
+              </form>
+            </div>
+          </div>
+
+          <!-- CADASTRO -->
+
+          <div class="onOff backlc" *ngIf="modo === 'cadastro'">
+            <div class="boxlc2 box-backlc">
+              <form method="post" name="dados" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <legend class="titulologin">Cadastro</legend>
+
+                <mat-form-field class="label">
+                  <mat-label for="name" class="nome">
+                    Nome: </mat-label>
+                  <input class="input-padrao" type="text" name="name" id="name" formControlName="name" matInput
+                    placeholder="José da Silva" required />
+                  <mat-error *ngIf="form.get('name')?.touched && form.get('name')?.hasError('required')">
+                    O nome é obrigatório!
+                  </mat-error>
+                </mat-form-field>
+
+
+
+                <mat-form-field class="label">
+                  <mat-label for="email" class="email">
+                    E-mail: </mat-label>
+                  <input class="input-padrao" type="email" id="email" formControlName="email" name="email" matInput
+                    placeholder="name@email.com" required />
+
+                  <mat-error *ngIf="form.get('email')?.touched && form.get('email')?.hasError('required')">
+                    O e-mail é obrigatório!
+                  </mat-error>
+
+                  <mat-error *ngIf="form.get('email')?.touched && form.get('email')?.hasError('email')">
+                    Digite um e-mail válido!
+                  </mat-error>
+
+                  <mat-error *ngIf="form.get('email')?.touched && form.get('email')?.hasError('emailExistente')">
+                    Este e-mail já está em uso!
+                  </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field class="label">
+                  <mat-label for="password" class="password">
+                    Senha:
+                  </mat-label>
+
+                  <input matInput class="input-padrao" type="password" id="password" name="password"
+                    formControlName="password" [type]="hide() ? 'password' : 'text'" />
+
+                  <button mat-icon-button matSuffix type="button" (click)="clickEvent($event)"
+                    [attr.aria-label]="'Mostrar senha'">
+                    <mat-icon>
+                      {{ hide() ? 'visibility_off' : 'visibility' }}
+                    </mat-icon>
+                  </button>
+
+                  <mat-error *ngIf="form.get('password')?.hasError('required')">
+                    A senha é obrigatória!
+                  </mat-error>
+
+                  <mat-error *ngIf="form.get('password')?.hasError('minlength')">
+                    A senha deve ter no mínimo 6 caracteres!
+                  </mat-error>
+
+                </mat-form-field>
+
+                <div class="pbotao">
+                  <button type="submit" value="Cadastrar" class="botaolc" name="acao">
+                    {{modo === 'cadastro' ? 'Cadastrar' : 'Entrar'}} </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>

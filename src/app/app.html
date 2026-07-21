@@ -1,0 +1,62 @@
+<div class="menu">
+  <app-left-sidebar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+    (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)">
+  </app-left-sidebar>
+
+  <a routerLink="/" target="_self"><img ngSrc="logo1.png" width="1000" height="1000" id="logo" priority /></a>
+  <!-- Usuário NÃO logado -->
+<button
+  *ngIf="!usuarioLogado"
+  class="fas fa-user"
+  mat-icon-button
+  (click)="abrirLogin()">
+</button>
+
+<!-- Usuário logado -->
+<button
+  *ngIf="usuarioLogado"
+  mat-icon-button
+  [matMenuTriggerFor]="menuUsuario"
+  class="fas fa-user">
+
+</button>
+ <mat-menu #menuUsuario="matMenu">
+  
+  <button mat-menu-item (click)="meuPerfil()">
+    <mat-icon>person</mat-icon>
+    <span>Meu Perfil</span>
+  </button>
+
+
+  <button mat-menu-item (click)="meusPedidos()">
+    <mat-icon>shopping_bag</mat-icon>
+    <span>Meus Pedidos</span>
+  </button>
+
+  <button mat-menu-item (click)="minhasViagens()">
+    <mat-icon>flight</mat-icon>
+    <span>Minhas Viagens</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+    <span>Sair</span>
+  </button>
+</mat-menu>
+</div>
+<ng-container *ngIf="router.url === '/'">
+
+  <app-buscar-viagens></app-buscar-viagens>
+  <app-pacotes></app-pacotes>
+  <app-mais-requisitados></app-mais-requisitados>
+  <app-opinioes></app-opinioes>
+  <app-envio-email></app-envio-email>
+
+</ng-container>
+
+<router-outlet *ngIf="router.url !== '/'"></router-outlet>
+
+<app-footer *ngIf="showMeuComponente"></app-footer>
+``

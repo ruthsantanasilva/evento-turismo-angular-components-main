@@ -1,0 +1,578 @@
+<!-- <body>
+  <router-outlet></router-outlet>
+  <div class="menu">
+    <app-left-sidebar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
+      (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)">
+    </app-left-sidebar>
+
+    <a routerLink="/" target="_self"><img ngSrc="assets/imagens/logo1.png" width="1000" height="1000" id="logo"
+        priority /></a>
+    <button class="fas-logout" 
+    mat-icon-button type="button" 
+    aria-label="Sair" (click)="logout()">
+      <mat-icon class="fas fa-logout">logout</mat-icon>
+    </button>
+    <a routerLink="/login">
+      <i class="fas fa-user"></i>
+ 
+    </a>
+     
+  </div>
+
+
+  <nav class="containerform">
+    <legend id="titulopacote">
+      Seu próximo destino começa aqui
+    </legend>
+
+    <div class="icones">
+      <ul class="iconesmenu">
+        <li>
+          <i class="fas fa-plane-arrival"></i>
+        </li>
+        <li>
+          <i class="fas fa-bed"></i>
+        </li>
+        <li>
+          <i class="fas fa-landmark"></i>
+        </li>
+      </ul>
+
+      <ul class="textosicones">
+        <li>
+          <p>Voo</p>
+        </li>
+        <li>
+          <p>Hospedagem</p>
+        </li>
+        <li>
+          <p>Passeios</p>
+        </li>
+      </ul>
+    </div>
+
+    <form class="formviagem">
+      <p>
+        <input list="origem" name="origem" class="origem" placeholder="Origem" />
+        <datalist id="origem">
+          <option value="São Paulo"></option>
+          <option value="Bonito - MS"></option>
+          <option value="Brasília - DF"></option>
+          <option value="Porto Seguro - BA"></option>
+          <option value="Nova Iorque - EUA"></option>
+          <option value="Roma - Itália"></option>
+        </datalist>
+      </p>
+      <p>
+        <input list="destino" name="destino" class="destino" placeholder="Destino" />
+        <datalist id="destino">
+          <option value="São Paulo"></option>
+          <option value="Bonito - MS"></option>
+          <option value="Brasília - DF"></option>
+          <option value="Porto Seguro - BA"></option>
+          <option value="Nova Iorque - EUA"></option>
+          <option value="Roma - Itália"></option>
+        </datalist>
+      </p>
+      <p>
+        <input type="text" name="data" id="data" class="data" placeholder="Ida" onfocus="(this.type='date')"
+          onblur="(this.type='text')" />
+      </p>
+      <p>
+        <input type="text" name="data" id="data" class="data" placeholder="Volta" onfocus="(this.type='date')"
+          onblur="(this.type='text')" />
+      </p>
+
+      <p>
+        <button type="button" id="botao" class="botaoform" (click)="buscarViagens()">
+          Buscar
+        </button>
+      </p>
+
+    </form>
+  </nav>
+
+  <header>
+    <h1>Confira nossos pacotes promocionais</h1>
+    <div id="linha-horizontal"></div>
+  </header>
+
+ <!-- <section class="corpo">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox">
+              </p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Bonito - MS / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de Brasília</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+              
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container2">
+      <div class="flipper2">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox2"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Ilhéus - BA / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de Brasília</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back2">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container3">
+      <div class="flipper3">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox3"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Califórnia - EUA / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de São Paulo</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back3">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container4">
+      <div class="flipper4">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox4"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Roma - Itália / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de São Paulo</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back4">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="corpo2">
+    <div class="flip-container5">
+      <div class="flipper5">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox5"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>São Paulo / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de Brasília</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back5">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container6">
+      <div class="flipper6">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox6"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Salvador - BA / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de Brasília</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back6">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container7">
+      <div class="flipper7">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox7"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Japão / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de São Paulo</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back7">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container8">
+      <div class="flipper8">
+        <div class="front">
+          <div class="box box-front">
+            <a routerLink="/login">
+              <p class="imgbox8"></p>
+              <p class="ver">Ver pacotes</p>
+              <h2>Rio de Janeiro / Pacote 2026</h2>
+              <p>5 dias / 4 noites</p>
+              <p>Saindo de Brasília</p>
+              <p>Hotel + Aéreo + Passeios</p>
+              <p class="valor">Valor final por pessoa</p>
+              <p></p>
+              <p class="preco">R$ 0,00</p>
+              <p class="obs">até 12x sem juros <br>
+                no cartão de crédito</p>
+              <p class="taxas">Taxas e impostos inclusos</p>
+            </a>
+          </div>
+        </div>
+        <div class="back">
+          <div class="box box-back8">
+            <a routerLink="/login">
+              <p>
+                <input type="button" value="Comprar Agora!" id="botao" class="botao" />
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+ <!-- <div class="botaoreserva">
+    <a routerLink="/login">
+      <p>
+        <input type="button" value="Reserve já!" id="botao" class="botao1" />
+      </p>
+    </a>
+  </div>
+
+  <h1 class="tituloopinioes">Lugares mais requisitados</h1>
+  <div class="linha-horizontal"></div>
+
+  <ul class="slider">
+    <li class="slide">
+      <a routerLink="/login" class="maisrequisitados">
+        <img ngSrc="assets/imagens/local/bonito.jpg" width="2000" height="2000" />
+      </a>
+    </li>
+    <li class="slide">
+      <a routerLink="/login" class="maisrequisitados">
+        <img ngSrc="assets/imagens/local/japao.jpg" width="2000" height="2000" />
+      </a>
+    </li>
+    <li class="slide">
+      <a routerLink="/login" class="maisrequisitados">
+        <img ngSrc="assets/imagens/local/roma.jpg" width="2000" height="2000" />
+      </a>
+    </li>
+    <li class="slide">
+      <a routerLink="/login" class="maisrequisitados">
+        <img ngSrc="assets/imagens/local/california.png" width="2000" height="2000" />
+      </a>
+    </li>
+  </ul>
+  <ul class="slider2">
+    <li class="slide2">
+      <p>Bonito - MG</p>
+    </li>
+    <li class="slide2">
+      <p>Japão</p>
+    </li>
+    <li class="slide2">
+      <p>Roma - Itália</p>
+    </li>
+    <li class="slide2">
+      <p>Califórnia - EUA</p>
+    </li>
+  </ul>
+
+  <h1 id="tituloopinioes">
+    A opinião dos nossos viajantes é sempre muito bem vinda
+  </h1>
+  <div id="linha-horizontal"></div>
+
+  <section class="corpo3">
+    <div class="flip-container9">
+      <div class="flipper9">
+        <div class="front3">
+          <div class="box box-front3">
+        <h3 class="tituloavaliacao">
+            <img ngSrc="assets/imagens/perfil/marina.jpg" width="2000" height="2000" alt="perfil"
+                class="perfil" />
+               Marina Souza
+            </h3>
+            <p>
+              <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                class="estrelas" />
+            </p>
+            <p class="txtavaliacao">
+              Minha viagem para São Paulo foi perfeita do início ao fim! Consegui encontrar ótimos preços e fazer toda a reserva de forma super rápida. O suporte foi excelente e me senti muito segura durante todo o processo. Com certeza vou planejar minhas próximas viagens por aqui!
+            </p>
+            <a href="index.html" target="_self">
+              <p class="txtavaliacao"><br>Avaliação de: São Paulo</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container10">
+      <div class="flipper10">
+        <div class="front3">
+          <div class="box box-front3">
+            <h3 class="tituloavaliacao">
+              <img ngSrc="assets/imagens/perfil/lucas.jpg" width="2000" height="2000" alt="perfil"
+                class="perfil" /> Lucas Almeida
+            </h3>
+            <p>
+              <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                class="estrelas" />
+            </p>
+            <p class="txtavaliacao">
+              Viajar para o Japão sempre foi um sonho, e essa plataforma tornou tudo muito mais fácil. Os pacotes estavam com preços incríveis!. Gostei muito da praticidade para comparar opções e organizar toda a viagem em poucos minutos.
+            </p>
+
+            <a href="index.html" target="_self">
+              <p class="txtavaliacao"><br>Avaliação de: Japão</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container11">
+      <div class="flipper11">
+        <div class="front3">
+          <div class="box box-front3">
+            <h3 class="tituloavaliacao">
+              <img ngSrc="assets/imagens/perfil/camila.jpg" width="2000" height="2000" alt="perfil"
+                class="perfil" /> Camila Ferreira
+            </h3>
+            <p>
+              <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                class="estrelas" />
+            </p>
+            <p class="txtavaliacao">
+           A experiência da minha viagem para Roma foi maravilhosa! Encontrei hospedagens excelentes e passagens com ótimo custo-benefício. Tudo funcionou perfeitamente e o atendimento me ajudou em cada detalhe da viagem.
+            </p>
+
+            <a href="index.html" target="_self">
+              <p class="txtavaliacao"><br>Avaliação de: Roma</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-container12">
+      <div class="flipper12">
+        <div class="front3">
+          <div class="box box-front3">
+            <h3 class="tituloavaliacao">
+              <img ngSrc="assets/imagens/perfil/rafael.jpg" width="2000" height="2000" alt="perfil"
+                class="perfil" /> Rafael Mendes
+            </h3>
+            <p>
+              <img ngSrc="assets/imagens/icone/estrelas.png" width="2000" height="2000" alt="estrelas"
+                class="estrelas" />
+            </p>
+            <p class="txtavaliacao">
+              Planejei minha viagem para o Rio de Janeiro pelo site e fiquei impressionado com a facilidade de uso. Além dos preços acessíveis, o processo de compra foi muito rápido e intuitivo. Recomendo demais para quem ama viajar!
+            </p>
+
+            <a href="index.html" target="_self">
+              <p class="txtavaliacao"><br>Avaliação de: Rio de Janeiro</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="containerformemail">
+    <form class="formemail">
+      <p id="emailcontato">
+        <img ngSrc="assets/imagens/contatoemail.png" width="2000" height="2000" alt="imagem de email"
+          id="emailimgcontato" />
+      </p>
+      <p id="recebaofertas">
+        Receba ofertas exclusivas do TravelGo no seu e-mail
+      </p>
+      <p>
+        <input type="text" id="textemail" placeholder="email@email.com" />
+      </p>
+
+      <a href="index.html" target="_self">
+        <p>
+          <input type="button" value="Enviar" class="botaoformemail" />
+        </p>
+      </a>
+    </form>
+  </nav>
+
+  <table>
+    <tr class="menu">
+      <td id="emailp">
+        <img ngSrc="assets/imagens/icone/email.png" width="2000" height="2000" alt="user" id="user" />
+        txxxxxxx@travelgo.com.br
+      </td>
+      <td id="central">
+        <img ngSrc="assets/imagens/icone/online.png" width="2000" height="2000" alt="user" id="user" />
+        Atendimento: (xx) xxxx-xxxx
+      </td>
+      <td id="rede2">
+        <a routerLink="/">
+          <img ngSrc="assets/imagens/icone/whatsapp.png" width="2000" height="2000" alt="user" id="user" />
+        </a>
+      </td>
+      <td id="rede3">
+        <a routerLink="/">
+          <img ngSrc="assets/imagens/icone/twitter.png" width="2000" height="2000" alt="user" id="user" />
+        </a>
+      </td>
+      <td id="rede4">
+        <a routerLink="/">
+          <img ngSrc="assets/imagens/icone/instagram.png" width="2000" height="2000" alt="user" id="user" />
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="fundo">.</div>
+
+  <footer class="rodape">
+    <p>
+      &copy Ruth Santana |
+      <a href="https://www.linkedin.com/in/ruthsantana" target="_blank" class="linkrodape">LinkedIn</a>
+    </p>
+
+    <p class="cred">
+      Crédito de imagens:
+      <a href="https://br.freepik.com/vetores-gratis/logotipo-detalhado-da-viagem_9544552.htm#query=viagem%20logo&position=5&from_view=search&track=ais"
+        class="linkrodape">Freepik</a>
+      |
+      <a href="https://pixabay.com/pt/vectors/avalia%C3%A7%C3%A3o-reveja-6930474/" class="linkrodape">Pixabay</a>
+    </p>
+  </footer>
+</body>-->

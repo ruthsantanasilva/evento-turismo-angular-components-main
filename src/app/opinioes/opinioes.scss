@@ -1,0 +1,91 @@
+
+/* ÁREA DE AVALIAÇÕES */
+
+.avaliacoes {
+  width: 100%;
+  max-width: 2000px;
+  margin: 50px auto;
+  padding: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card-avaliacao {
+  width: 320px;
+  min-height: 200px;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+.card-avaliacao:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cliente {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.perfil {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 3px solid #fa7b04;
+}
+
+.cliente h3 {
+  margin: 0;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.estrelas {
+  margin-top: 5px;
+  display: flex;
+  gap: 2px;
+}
+
+.estrelas mat-icon {
+  color: #ffc107;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.texto {
+  margin-top: 20px;
+
+  color: #555;
+  line-height: 1.7;
+  text-align: justify;
+
+  font-size: 0.95rem;
+}
+
+.destino {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: #fa7b04;
+  font-weight: 600;
+
+  border-top: 1px solid #ececec;
+  padding-top: 15px;
+  width: 100%;
+}
