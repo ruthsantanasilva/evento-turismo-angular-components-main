@@ -20,7 +20,7 @@
   class="fas fa-user">
 
 </button>
- <mat-menu #menuUsuario="matMenu">
+ <mat-menu #menuUsuario="matMenu" class="menu-usuario">
   
   <button mat-menu-item (click)="meuPerfil()">
     <mat-icon>person</mat-icon>
@@ -59,4 +59,3 @@
 <router-outlet *ngIf="router.url !== '/'"></router-outlet>
 
 <app-footer *ngIf="showMeuComponente"></app-footer>
-``

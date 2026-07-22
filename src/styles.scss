@@ -40,15 +40,15 @@ body {
 
 :root {
   --img-designer: url("/Designer.png");
-  --img-bonito: url("/local/bonito.jpg");
-  --img-california: url("/local/california.png");
+  --img-bonito: url("/local/bonito-ms.jpg");
+  --img-california: url("/local/california-eua.jpg");
   --img-grecia1: url("/local/grecia1.png");
   --img-japao: url("/local/japao.jpg");
-  --img-praia: url("/local/praia.jpg");
-  --img-riodejaneiro: url("/local/riodejaneiro.jpg");
-  --img-roma: url("/local/roma.jpg");
-  --img-salvador: url("/local/salvador.jpg");
-  --img-saopaulo: url("/local/saopaulo.jpg");
+  --img-praia: url("/local/ilheus-ba.jpg");
+  --img-riodejaneiro: url("/local/rio-de-janeiro.jpg");
+  --img-roma: url("/local/roma-italia.jpg");
+  --img-salvador: url("/local/salvador-ba.jpg");
+  --img-saopaulo: url("/local/sao-paulo.jpg");
 }
 
 
@@ -117,37 +117,8 @@ section.corpo {
   text-align: center;
   font-size: 1em;
 }
-.tituloopinioes{
-  font-family: "Beach";
-  font-size: 2.3em;
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-section.corpo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
- 
-}
 
-section.corpo2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-section.corpo3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-}
 #logo {
   margin-left: 80px;
   margin-top: 10px;
@@ -155,38 +126,9 @@ section.corpo3 {
   height: 50px; 
 }
 
-.fas-logout{
-  float: right;
-  background-color: transparent;
-  border: none;
-  padding: none;
-  margin-right: 20px;
-}
-.fa-logout{
-  width: 20px;
-  height: 20px;
-}
-.fa-plane-arrival, .fa-bed, .fa-landmark, .fa-logout{
-  float: center;
-  margin-top: 10px;
-  border-radius: 0.313rem;
-  background-color: #fa7b04;
-  border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(85, 84, 84, 0.507);
-  color: #fff;
-  padding: 0.800rem;
-  font-size: 25px;
-  font-weight:900;
-  cursor: pointer;
-  border: none;
-}
-.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover, .fa-logout:hover {
-  background-color: #881df2;
-  transition: all 0.1s ease-in-out 0s;
-}
-
 .fa-user {
   margin-top: 15px;
+  margin-right: 10px;
   float: right;
   width: 3rem;
   min-width: 3rem;
@@ -196,62 +138,25 @@ section.corpo3 {
   font-weight:900;
   cursor: pointer;
   border: none;
-}
-#entre {
-  width: 20px;
-  height: 20px;
-  margin-top: 5px;
-} 
-nav ul {
-  text-align: right;
-  width: 100%;
-  color: #881df2;
-}
-nav ul li {
-  display: inline-block;
-  padding: 5px;
-  margin-left: 5px;
-  width: 70px;
-  text-align: right;
-  margin-right: 30px;
-  font-weight: bolder;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 0.7em;
-  color: #881df2;
-}
-nav ul li:hover {
-  color: #fff;
-  transition: 0.2s;
-}
-nav ul li a {
-  text-decoration: none;
-}
-nav ul li a:hover {
-  text-decoration: none;
-  color: #fff;
-} 
-#titulopacote {
-  font-family: "Beach";
-  font-size: 4em;
-  color: #0d0d0d;
-  text-align: center;
-}
-#subtitulo {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 1em;
-  color: #0d0d0d;
-  text-align: center;
+  background-color: #fa7b04;
 }
 
-.ver{
-  color: #fff;
-  background: #fa7b04;
-  text-transform: uppercase;
+.menu-usuario {
+  background-color: #fa7b04;
+  color: #000000;
   font-weight: bolder;
-  margin-bottom: 10px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.507);
-  border-color: transparent;
+  font-size: 1em;
 }
+.menu-usuario button {
+  color: #000000;
+  font-weight: bolder;
+  font-size: 1em;
+}
+.menu-usuario button:hover {
+  color: #fa7b04;
+  transition: all 0.4s ease-in;
+}
+
 
 
 

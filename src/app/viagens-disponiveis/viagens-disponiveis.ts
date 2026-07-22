@@ -11,7 +11,6 @@ import { ViagensService } from './viagens-service';
 import { MaisRequisitados } from '../mais-requisitados/mais-requisitados';
 import { BuscarViagens } from '../buscar-viagens/buscar-viagens';
 import { Opinioes } from '../opinioes/opinioes';
-import { Footer } from '../footer/footer';
 import { EnvioEmail } from "../envio-email/envio-email";
 import { Login } from '../login/login';
 import { MatDialog } from '@angular/material/dialog';
@@ -31,8 +30,7 @@ import { MatDialog } from '@angular/material/dialog';
     CommonModule,
     MatTableModule,
     MaisRequisitados,
-    Opinioes,
-    Footer, BuscarViagens,
+    Opinioes, BuscarViagens,
     EnvioEmail
 ],
   templateUrl: './viagens-disponiveis.html',

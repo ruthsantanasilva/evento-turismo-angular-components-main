@@ -1,0 +1,81 @@
+<div class="pagina-compra" *ngIf="pacote">
+
+  <div class="hero">
+    <img [src]="'local/' + pacote.id + '.jpg'" [alt]="pacote.destino">
+
+    <div class="overlay">
+      <h1>{{ pacote.destino }}</h1>
+      <p>5 dias • 4 noites • Hotel + Aéreo + Passeios</p>
+    </div>
+  </div>
+
+  <div class="conteudo">
+
+    <div class="info-pacote">
+
+      <div class="card-pacote">
+
+        <h2>Resumo da Viagem</h2>
+
+        <p>
+          <strong>Destino:</strong>
+          {{ pacote.destino }}
+        </p>
+
+        <p>
+          <strong>Duração:</strong>
+          5 dias / 4 noites
+        </p>
+
+        <p>
+          <strong>Inclui:</strong>
+          Hotel, Aéreo e Passeios
+        </p>
+
+        <div class="valor">
+          R$ {{ pacote.preco }}
+        </div>
+
+        <small>Até 12x sem juros</small>
+
+      </div>
+
+    </div>
+
+    <div class="formulario">
+
+      <h2>Dados do Passageiro</h2>
+
+      <form>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nome Completo</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>CPF</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Telefone</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="btn-comprar">
+          Finalizar Compra
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+.tituloopinioes {
+  position: relative;
+  margin-top: 80px;
+  font-family: "Beach";
+  font-size: 3em;
+  color: #0d0d0d;
+  text-align: center;
+}
+
 .slider,
 .slider2,
 .maisrequisitados {
@@ -11,10 +20,12 @@
   height: 95%;
   width: 95%;
 }
+
 .maisrequisitados:hover{
     transform: translateY(5px);
     transition: all 0.2s ease-in-out 0s;
 }
+
 li.slide {
   margin-top: 35px;
   display: flex;

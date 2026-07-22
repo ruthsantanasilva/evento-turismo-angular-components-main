@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+#titulopacote {
+  font-family: "Beach";
+  font-size: 4em;
+  color: #0d0d0d;
+  text-align: center;
+}
+
 .icones{
   width: 100%;
 }
@@ -22,6 +29,27 @@
   color: #000;
   margin-left: 12px;
 }
+
+
+.fa-plane-arrival, .fa-bed, .fa-landmark, .fa-logout{
+  float: center;
+  margin-top: 10px;
+  border-radius: 0.313rem;
+  background-color: #fa7b04;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(85, 84, 84, 0.507);
+  color: #fff;
+  padding: 0.800rem;
+  font-size: 25px;
+  font-weight:900;
+  cursor: pointer;
+  border: none;
+}
+.fa-plane-arrival:hover, .fa-bed:hover, .fa-landmark:hover, .fa-logout:hover {
+  background-color: #881df2;
+  transition: all 0.1s ease-in-out 0s;
+}
+
  /*FORMULÁRIO DE ORIGEM E DESTINO*/
 .containerform {
   background: var(--img-designer) center center no-repeat fixed;
@@ -87,6 +115,35 @@
   transition: all 0.4s ease-in;
 }
 
+nav ul {
+  text-align: right;
+  width: 100%;
+  color: #881df2;
+}
+nav ul li {
+  display: inline-block;
+  padding: 5px;
+  margin-left: 5px;
+  width: 70px;
+  text-align: right;
+  margin-right: 30px;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 0.7em;
+  color: #881df2;
+}
+nav ul li:hover {
+  color: #fff;
+  transition: 0.2s;
+}
+nav ul li a {
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 @media (max-width: 768px) {
 
   .containerform {
@@ -117,3 +174,4 @@
     margin: 0;
   }
 }
+
