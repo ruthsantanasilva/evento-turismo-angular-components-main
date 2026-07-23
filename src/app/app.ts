@@ -1,6 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { Opinioes } from './opinioes/opinioes';
-import { Pacotes } from './pacotes/pacotes';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Router, RouterLink, RouterOutlet, NavigationEnd } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -8,23 +6,18 @@ import { LeftSidebarComponent } from './menu-esquerda/menu-esquerda';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { MaisRequisitados } from './mais-requisitados/mais-requisitados';
 import { Footer } from './footer/footer';
-import { BuscarViagens } from "./buscar-viagens/buscar-viagens";
 import { filter } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
 import { Login } from './login/login';
-import { EnvioEmail } from "./envio-email/envio-email";
 import { MatDividerModule} from '@angular/material/divider';
 import { MatMenuModule} from '@angular/material/menu';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, 
-    Opinioes, 
-    Pacotes, 
+  imports: [RouterOutlet,
     Footer,
     LeftSidebarComponent,
     NgOptimizedImage,
@@ -35,11 +28,8 @@ import { MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatTooltipModule,
     CommonModule,
-    MaisRequisitados, 
-    BuscarViagens, 
-    MatDialogModule, 
-    EnvioEmail,
-    MatDividerModule, 
+    MatDialogModule,
+    MatDividerModule,
     MatMenuModule],
   templateUrl: './app.html',
   styleUrl: './app.scss'

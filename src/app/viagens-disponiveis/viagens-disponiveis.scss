@@ -11,6 +11,18 @@ h1 {
   font-family: "Beach";
   color: #0d0d0d;
 }
+.nenhum-voo {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  padding: 16px;
+  gap: 20px;              
+  font-size: 1.5em;
+  font-family: "Beach";
+  color: #0d0d0d;
+}
 /* PACOTES DE VIAGEM */
 
 .lista-voos {

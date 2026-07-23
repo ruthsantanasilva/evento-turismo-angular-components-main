@@ -46,16 +46,7 @@
   </button>
 </mat-menu>
 </div>
-<ng-container *ngIf="router.url === '/'">
 
-  <app-buscar-viagens></app-buscar-viagens>
-  <app-pacotes></app-pacotes>
-  <app-mais-requisitados></app-mais-requisitados>
-  <app-opinioes></app-opinioes>
-  <app-envio-email></app-envio-email>
-
-</ng-container>
-
-<router-outlet *ngIf="router.url !== '/'"></router-outlet>
+<router-outlet></router-outlet>
 
 <app-footer *ngIf="showMeuComponente"></app-footer>

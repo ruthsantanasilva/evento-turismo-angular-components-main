@@ -59,8 +59,9 @@
 </div>
 
 
-<div *ngIf="voosFiltrados.length === 0">
-  Nenhum voo encontrado 😢
+<div class="nenhum-voo" *ngIf="voosFiltrados.length === 0">
+  <mat-icon>flight_takeoff</mat-icon>
+  <p>Nenhum voo encontrado...</p>
 </div>
 
 <app-mais-requisitados></app-mais-requisitados>

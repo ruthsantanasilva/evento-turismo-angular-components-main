@@ -139,6 +139,11 @@ section.corpo {
   cursor: pointer;
   border: none;
   background-color: #fa7b04;
+  color:#fff;
+}
+.fa-user:hover {
+  background-color: #881df2;
+  transition: all 0.1s ease-in-out 0s;
 }
 
 .menu-usuario {

@@ -108,3 +108,9 @@ mat-form-field {
 .btn-comprar:hover {
   background: #e65c00 !important;
 }
+
+@media (max-width: 900px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+}
