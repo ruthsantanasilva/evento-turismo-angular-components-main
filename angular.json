@@ -30,10 +30,7 @@
               "fonts": false
             },
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+               "src/assets" 
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
