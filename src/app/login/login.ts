@@ -29,8 +29,7 @@ interface Usuario {
     ReactiveFormsModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './login.html',
-  styleUrls: ['./login.scss',
-    '../pagina-inicial/pagina-inicial.scss'],
+  styleUrls: ['./login.scss'],
 })
 
 export class Login implements OnInit {

@@ -21,7 +21,6 @@ import { MatDialog } from '@angular/material/dialog';
   standalone: true,
   imports: [
     LeftSidebarComponent,
-    RouterLink,
     RouterOutlet,
     MatSidenavModule,
     MatSnackBarModule,
